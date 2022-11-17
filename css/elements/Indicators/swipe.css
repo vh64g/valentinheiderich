@@ -1,0 +1,114 @@
+#left-indicator {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    scale: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(0, -100%);
+    pointer-events: none;
+}
+
+#left-indicator-hint {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    rotate: 90deg;
+    transform: translate(-22%, -110%);
+    font-size: 1.5em;
+    color: #8C8C8C;
+    pointer-events: none;
+}
+
+#right-indicator {
+    z-index: 1;
+    position: absolute;
+    rotate: 180deg;
+    top: 50%;
+    right: 0;
+    scale: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(0, 50%);
+    pointer-events: none;
+    user-select: none;
+}
+
+#right-indicator-hint {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    rotate: -90deg;
+    transform: translate(-15%, -110%);
+    font-size: 1.5em;
+    color: #8C8C8C;
+    pointer-events: none;
+    user-select: none;
+}
+
+#down-indicator {
+    z-index: 1;
+    position: absolute;
+    rotate: -90deg;
+    top: 90%;
+    left: 50%;
+    scale: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(0, -100%);
+    pointer-events: none;
+}
+
+#down-indicator-hint {
+    z-index: 1;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-50%, 0%);
+    font-size: 1.5em;
+    color: #8C8C8C;
+    pointer-events: none;
+}
+
+#up-indicator {
+    z-index: 1;
+    position: absolute;
+    rotate: 90deg;
+    top: 0;
+    left: 50%;
+    scale: 50%;
+    transform: translate(0%, 50%);
+    pointer-events: none;
+}
+
+#up-indicator-hint {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    transform: translate(-35%, 200%);
+    font-size: 1.5em;
+    color: #8C8C8C;
+    pointer-events: none;
+}
+
+#swipe-hint {
+    z-index: 1;
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}

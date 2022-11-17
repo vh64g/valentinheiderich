@@ -1,0 +1,130 @@
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+    pointer-events:none;
+    border-radius: 0;
+}
+
+.cursor{
+    width: 2rem;
+    height: 2rem;
+    border: 0 solid transparent;
+    border-radius: 40%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow:
+            0 0 10px 0.6rem rgba(231, 235, 218, 0.5),
+            0 0 30px 1.2rem rgba(207, 211, 205, 0.3),
+            0 0 40px 1.8rem rgba(076, 047, 039, 0.2);
+    user-select: none;
+    z-index: 1;
+}
+
+.cursor-tail{
+    position: absolute;
+    animation: blend_out 1s;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow:
+            0 0 20px 10px pink,
+            0 0 10px 5px hotpink,
+            0 0 02px 2px white;
+    user-select: none;
+    z-index: 0;
+}
+
+html, body {
+    overflow: hidden;
+    background-color: #000;
+}
+
+body {
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#headline {
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3em;
+    color: #8C8C8C;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: slide-in-down 1s linear;
+}
+
+#provider {
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 1.5em;
+    color: #8C8C8C;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: blend-in 3s;
+}
+
+#contact {
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 1.5em;
+    color: #8C8C8C;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: blend-in 3s;
+}
+
+#responsible {
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    font-size: 1.5em;
+    color: #8C8C8C;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: blend-in 3s;
+}
+
+#swipe-hint {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: #8C8C8C;
+    transform: translate(-50%, 100%);
+    pointer-events: none;
+    animation: blend-in 3s;
+}

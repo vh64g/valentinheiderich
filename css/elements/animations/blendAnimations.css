@@ -1,0 +1,35 @@
+@keyframes blend_in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes blend_in_3_4 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 75%;
+    }
+}
+
+@keyframes blend_out {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes blend_out_3_4 {
+    0%{
+        opacity: 75%;
+    }
+    100%{
+        opacity: 0;
+    }
+}

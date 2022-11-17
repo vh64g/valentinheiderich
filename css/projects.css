@@ -1,0 +1,60 @@
+body{
+    background: linear-gradient(35deg, #A88BEB, #F8CEEC);
+    overflow: hidden;
+}
+
+.button{
+    background: linear-gradient(35deg, #A88BEB, #F8CEEC);
+    border-radius: 50px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.25em;
+    transition: all 0.3s ease;
+    cursor: none;
+}
+.button:hover{
+    background: #16BFFD;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #CB3066, #16BFFD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.button:active{
+    transform: scale(75%);
+}
+
+.cursor{
+    background: transparent;
+    border: 1px solid #FF0050;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    z-index: 999;
+    transition: all 0.01s ease;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    cursor: none;
+}
+
+#theme-selector{
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border: transparent 1px solid;
+    transform: translate(50%, -50%);
+    margin: 1rem;
+    z-index: 1;
+    cursor: none;
+}
+
+#content{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    height: 90vh;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: none;
+}

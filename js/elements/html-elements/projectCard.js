@@ -6,6 +6,10 @@ class projectCard extends HTMLElement {
 
         const card = document.createElement('a');
           card.setAttribute('class', 'card');
+          if (this.hasAttribute('href')) {
+            card.setAttribute('href', this.getAttribute('href'));
+            card.setAttribute('target', '_blank');
+          }
 
             const cardImage = document.createElement('img');
               cardImage.setAttribute('class', 'card__image');

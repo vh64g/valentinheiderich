@@ -17,7 +17,7 @@ document.addEventListener("swipe", (e) => {
             break;
         case "right":
             updateAnimations("slide-out-left 3s ease-in-out forwards", "slide-out-left-hint 3s ease-in-out forwards", true);
-            setTimeout(() => {document.location.href = "inDevelopment.html";}, 3000);
+            setTimeout(() => {document.location.href = "projects.html";}, 3000);
             break;
         case "up":
             break;

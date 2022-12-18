@@ -73,3 +73,9 @@ h1{
     cursor: none;
     user-select: none;
 }
+
+li{
+    cursor: none;
+    user-select: none;
+    list-style-type: none;
+}

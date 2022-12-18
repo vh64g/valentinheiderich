@@ -1,28 +1,22 @@
-let pr_button = document.getElementById("pr-btn");
-let ga_button = document.getElementById("ga-btn");
-let pu_button = document.getElementById("pu-btn");
-let po_button = document.getElementById("po-btn");
-let ne_button = document.getElementById("ne-btn");
 
-let content = document.getElementById("content");
+document.addEventListener("swipe", (e) => {
+    switch(e.detail) {
+        case "left":
+            document.location.href = "home.html";
+            break;
+        case "right":
+            break;
+        case "up":
+            break;
+        case "down":
+            break;
+    }
+});
 
-pr_button.addEventListener("click", function() {
-    //Programming projects
-    content.innerHTML = "";
-});
-ga_button.addEventListener("click", function() {
-    //Game projects
-    content.innerHTML = "";
-});
-pu_button.addEventListener("click", function() {
-    //Publications
-    content.innerHTML = "";
-});
-po_button.addEventListener("click", function() {
-    //Politics
-    content.innerHTML = "";
-});
-ne_button.addEventListener("click", function() {
-    //News
-    content.innerHTML = "";
+window.addEventListener( "pageshow", function ( event ) {
+    const historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+    if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+    }
 });

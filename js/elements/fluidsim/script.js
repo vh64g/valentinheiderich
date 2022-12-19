@@ -1,4 +1,4 @@
-if (window.innerWidth > 768 || document.location.name === "/pages/about.html"){
+if (window.innerWidth > 768){
     // Simulation section  ---- check out the original code here: https://github.com/PavelDoGreat/WebGL-Fluid-Simulation
     let canvas = document.getElementsByTagName('canvas')[0];
     resizeCanvas();

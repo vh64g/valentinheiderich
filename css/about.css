@@ -30,12 +30,28 @@
     animation: slide-in-left 3s;
 }
 
+#about-text-box {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    font-size: 1.5em;
+    color: rgba(255,255,255,0.75);
+    transform: translate(-50%, -50%);
+    border: gray 2px solid;
+    border-radius: 1em;
+    pointer-events: none;
+    animation: slide-in-left 3s;
+}
+
 #about-text {
     z-index: 1;
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 1.5em;
+    font-size: 1em;
     color: rgba(255,255,255,0.75);
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -76,6 +92,7 @@ canvas {
 ul {
     list-style-type: "- ";
     margin: auto;
+    padding-top: 1em;
 }
 
 p {

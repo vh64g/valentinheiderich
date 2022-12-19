@@ -117,3 +117,11 @@ bubbleSwitch.addEventListener("click", bubbleSwitchClicked);
 //Loops
 setInterval(spawnBubbleRandomly, 1);
 setInterval(updateBubbles, 16);
+
+window.addEventListener( "pageshow", function ( event ) {
+    const historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);
+    if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+    }
+});

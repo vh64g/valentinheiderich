@@ -12,38 +12,6 @@
     user-select: none;
 }
 
-.cursor{
-    width: 2rem;
-    height: 2rem;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    box-shadow:
-        0 0 0 0.5rem rgba(255, 255, 255, 0.5),
-        0 0 0 0.75rem rgba(255, 255, 255, 0.25),
-        0 0 0 1rem rgba(255, 255, 255, 0.1),
-        0 0 0 1.25rem rgba(255, 255, 255, 0.05),
-        0 0 0 1.5rem rgba(255, 255, 255, 0.025);
-    user-select: none;
-}
-
-.star{
-    width: 1px;
-    height: 1px;
-    border-radius: 50%;
-    position: absolute;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    background: yellow;
-    user-select: none;
-    box-shadow: 0 0 5px 1px #fff;
-    animation: star 2s;
-}
-
 .hint{
     position: absolute;
     top: 0;
@@ -58,6 +26,40 @@
     color: white;
     user-select: none;
     animation: blend_in 2s;
+}
+
+@media screen and (min-width: 1180px){
+    .cursor{
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        box-shadow:
+                0 0 0 0.5rem rgba(255, 255, 255, 0.5),
+                0 0 0 0.75rem rgba(255, 255, 255, 0.25),
+                0 0 0 1rem rgba(255, 255, 255, 0.1),
+                0 0 0 1.25rem rgba(255, 255, 255, 0.05),
+                0 0 0 1.5rem rgba(255, 255, 255, 0.025);
+        user-select: none;
+    }
+
+    .star{
+        width: 1px;
+        height: 1px;
+        border-radius: 50%;
+        position: absolute;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        background: yellow;
+        user-select: none;
+        box-shadow: 0 0 5px 1px #fff;
+        animation: star 2s;
+    }
 }
 
 @keyframes star{

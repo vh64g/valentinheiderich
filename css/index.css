@@ -88,3 +88,8 @@ body{
     box-shadow: 0 0 4px 2px #0ff;
     user-select: none;
 }
+
+@media screen and (max-width: 768px){
+    .switch{visibility: collapse;}
+    .switchCheckbox{visibility: collapse;}
+}

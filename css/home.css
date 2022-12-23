@@ -73,6 +73,20 @@
         animation: slide-in-top 3s;
     }
 
+    #hosted-with {
+        z-index: 1;
+        position: absolute;
+        top: 3%;
+        left: 50%;
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        color: #8C8C8C;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+    }
+
     #swipe-hint {
         z-index: 1;
         position: absolute;
@@ -128,6 +142,20 @@
         padding: 0;
         color: #8C8C8C;
         transform: translate(-55%, -50%);
+        pointer-events: none;
+    }
+
+    #hosted-with {
+        z-index: 1;
+        position: absolute;
+        top: 97%;
+        left: 50%;
+        font-size: 1em;
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        color: #8C8C8C;
+        transform: translate(-50%, -50%);
         pointer-events: none;
     }
 

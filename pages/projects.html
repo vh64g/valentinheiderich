@@ -12,26 +12,21 @@
     <link rel="stylesheet" href="../css/elements/animations/glow.css">
     <link rel="stylesheet" href="../css/elements/cards/cards-1.css">
     <link rel="stylesheet" href="../css/elements/Indicators/swipe.css">
+    <link rel="stylesheet" href="../css/elements/loader/classique.css">
     <link rel="stylesheet" href="../css/projects.css">
     <script src="../js/elements/html-elements/projectCard.js" defer></script>
 </head>
-<body>
+<body class="body">
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
     <div id="swipe-indicators">
         <img id="left-indicator" class="indicator" src="../data/symbols/left_arrows/white01.png" alt="left_arrow">
         <p id="left-indicator-hint">Home</p>
     </div>
-    <!--
-    <div id="theme-selector">
-        <button class="button" id="pr-btn">Programming</button>
-        <button class="button" id="ga-btn">Games</button>
-        <button class="button" id="pu-btn">Publications</button>
-        <button class="button" id="po-btn">Politics</button>
-        <button class="button" id="ne-btn">News</button>
-    </div>
-    -->
     <div id="content">
         <ul>
-            <li><h1>Links</h1></li>
+            <li><h1 class="headline">Links</h1></li>
             <li><ul class="cards">
                 <li><project-card image="../data/images/me/vh01_590-552.png"
                                   thumb="../data/images/me/vh01_590-552.png"
@@ -90,7 +85,7 @@
                                   status="">
                 </project-card></li>
             </ul></li>
-            <li><h1>News</h1></li>
+            <li><h1 class="headline">News</h1></li>
             <li><ul class="cards">
                 <li><project-card image="../data/images/programming-section/alpha9.png"
                                   thumb="../data/images/programming-section/logo_circle.png"
@@ -98,15 +93,8 @@
                                   description="This update focuses on user profiles, to give users more freedom of personalisation."
                                   status="released">
                 </project-card></li>
-                <li><project-card image="../data/images/me/vh01_590-552.png"
-                                  thumb="../data/images/me/vh01_590-552.png"
-                                  href="https://www.stuttgart.de/rathaus/jugendrat/wahlen-2023/"
-                                  title="Jugendratswahl 2023"
-                                  description="The election of the youth council of the city of Stuttgart in 2023. (photo by daniielk (instagram))"
-                                  status="date: Feb 2023">
-                </project-card></li>
             </ul></li>
-            <li><h1>Programming</h1></li>
+            <li><h1 class="headline">Programming</h1></li>
             <li><ul class="cards">
                 <li><project-card image="../data/images/programming-section/alpha9.png"
                                   thumb="../data/images/programming-section/logo_circle.png"
@@ -129,7 +117,7 @@
                                   status="18.12.2022">
                 </project-card></li>
             </ul></li>
-            <li><h1>Games</h1></li>
+            <li><h1 class="headline">Games</h1></li>
             <li><ul class="cards">
                 <li><project-card image="../data/images/programming-section/quidditch01.png"
                                   thumb="../data/images/programming-section/AbstractArt.png"
@@ -139,7 +127,7 @@
                                   status="will be contionued soon">
                 </project-card></li>
             </ul></li>
-            <li><h1>Publications</h1></li>
+            <li><h1 class="headline">Publications</h1></li>
             <li><ul class="cards">
                 <li><project-card image="../data/images/programming-section/earth01.png"
                                   thumb="../data/images/programming-section/earth01.png"
@@ -154,15 +142,9 @@
                                   status="should be released in 2023">
                 </project-card></li>
             </ul></li>
-            <li><h1>Politics</h1></li>
+            <li><h1 class="headline">Politics</h1></li>
             <li><ul class="cards">
-                <li><project-card image="../data/images/me/8k/DSC_2332.JPG"
-                                  thumb="../data/images/me/vh01_590-552.png"
-                                  href="https://www.stuttgart.de/rathaus/jugendrat/wahlen-2023/"
-                                  title="Jugendratswahl 2023"
-                                  description="The election of the youth council of the city of Stuttgart in 2023. (photo by daniielk (instagram))"
-                                  status="date: Feb 2023">
-                </project-card></li>
+
             </ul></li>
         </ul>
     </div>

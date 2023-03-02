@@ -1,3 +1,5 @@
+let body = document.querySelector(".body");
+let loader = document.querySelector(".loader-wrapper")
 
 document.addEventListener("swipe", (e) => {
     switch(e.detail) {
@@ -19,4 +21,8 @@ window.addEventListener( "pageshow", function ( event ) {
         // Handle page restore.
         window.location.reload();
     }
+});
+
+window.addEventListener("load", () => {
+    loader.style.visibility = "hidden"
 });

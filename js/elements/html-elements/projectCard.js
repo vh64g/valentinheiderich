@@ -43,7 +43,7 @@ class projectCard extends HTMLElement {
         const style = document.createElement('style');
             style.textContent = `
                 :root {
-                  --surface-color: #fff;
+                  --surface-color: #fffb00;
                   --curve: 40;
                 }
                 
@@ -121,8 +121,11 @@ class projectCard extends HTMLElement {
                   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
                 }       
                 
-                .card:hover .card__header {
-                  transform: translateY(0);
+                .card:hover {
+                    transform: translate3d(10px, -10px, -10px);
+                    box-shadow: 10px 10px 100px 10px #0ff;
+                }.card__header {
+                    transform: translateY(0);
                 }
                 
                 .card__thumb {
@@ -135,7 +138,7 @@ class projectCard extends HTMLElement {
                 .card__title {
                   font-size: 1em;
                   margin: 0 0 .3em;
-                  color: #6A515E;
+                  color: black;
                 }
                 
                 .card__tagline {
@@ -148,13 +151,13 @@ class projectCard extends HTMLElement {
                 
                 .card__status {
                   font-size: .8em;
-                  color: #D7BDCA;
+                  color: #3d3d3d;
                 }
                 
                 .card__description {
                   padding: 0 2em 2em;
                   margin: 0;
-                  color: #D7BDCA;
+                  color: #3d3d3d;
                   font-family: "MockFlowFont";   
                   display: -webkit-box;
                   -webkit-box-orient: vertical;

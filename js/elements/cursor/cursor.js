@@ -1,4 +1,5 @@
 let mouseCursor = document.querySelector(".cursor");
+let animated_cursor = false
 
 function cursor(e) {
     mouseCursor.style.top = e.pageY + "px";
@@ -10,5 +11,5 @@ function touchCursor(e) {
     mouseCursor.style.left = e.touches[0].pageX + "px";
 }
 
-window.addEventListener("mousemove", cursor);
+if (animated_cursor) {window.addEventListener("mousemove", animatedCursor);} else {window.addEventListener("mousemove", cursor);}
 window.addEventListener("touchmove", touchCursor);

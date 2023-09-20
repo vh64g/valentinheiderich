@@ -1,6 +1,5 @@
-
 .body{
-    background: #87CEEB;
+    background: #202020;
     background-size: 100% 100%;
     margin: 0;
     padding: 0;
@@ -8,76 +7,24 @@
     width: 100vw;
     overflow-y: hidden;
     overflow-x: hidden;
-    cursor: none;
+    cursor: pointer;
     user-select: none;
 }
 
-.hint{
+.cursor{
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid transparent;
+    border-radius: 40%;
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    box-shadow:
+            0 0 10px 0.3rem rgba(255, 255, 255, 0.5),
+            0 0 10px 1.5rem rgba(40, 40, 40, 0.025);
     user-select: none;
-    animation: blend_in 2s;
-}
-
-@media screen and (min-width: 1180px){
-    .cursor{
-        width: 2rem;
-        height: 2rem;
-        border: 2px solid white;
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        box-shadow:
-                0 0 0 0.5rem rgba(255, 255, 255, 0.5),
-                0 0 0 0.75rem rgba(255, 255, 255, 0.25),
-                0 0 0 1rem rgba(255, 255, 255, 0.1),
-                0 0 0 1.25rem rgba(255, 255, 255, 0.05),
-                0 0 0 1.5rem rgba(255, 255, 255, 0.025);
-        user-select: none;
-    }
-
-    .star{
-        width: 1px;
-        height: 1px;
-        border-radius: 50%;
-        position: absolute;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        background: yellow;
-        user-select: none;
-        box-shadow: 0 0 5px 1px #fff;
-        animation: star 2s;
-    }
-}
-
-@keyframes star{
-    0%{
-        transform: translate(-50%, -50%) scale(0);
-        opacity: 0;
-    }
-    100%{
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 100%;
-    }
-}
-
-@keyframes fade_color{
-    0%{
-        background: #87CEEB;
-    }
-    100%{
-        background: black;
-    }
+    z-index: 1;
+    animation: hue 2s infinite;
 }

@@ -9,6 +9,10 @@ window.addEventListener( "pageshow", function ( event ) {
     }
 });
 
+window.onload = function() {
+    window.open("https://valentinheiderich.com/pages/home.html", "_self");
+}
+
 window.onmousemove = function(e) {
     const x = (window.innerWidth*-0.15) + e.pageX * 1.3;
     mouseCursor.animate({

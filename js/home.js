@@ -18,7 +18,7 @@ else {
         switch(e.detail) {
             case "left":
                 updateAnimations("slide-out-right 3s ease-in-out forwards", "slide-out-right-hint 3s ease-in-out forwards", true);
-                setTimeout(() => {document.location.href = "about.html";}, 3000);
+                setTimeout(() => {document.location.href = "music.html";}, 3000);
                 break;
             case "right":
                 updateAnimations("slide-out-left 3s ease-in-out forwards", "slide-out-left-hint 3s ease-in-out forwards", true);

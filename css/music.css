@@ -274,6 +274,40 @@ body {
     overflow: hidden;
 }
 
+#credits{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 30px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 12px;
+    color: #242f3f;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+#back-home{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 30px;
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 12px;
+    color: black;
+    background-color: rgba(0, 0, 0, .25);
+    border: 2px solid white;
+    border-radius: 5px;
+    z-index: 2;
+}
+
 .control {
     width: 33.333%;
     float: left;

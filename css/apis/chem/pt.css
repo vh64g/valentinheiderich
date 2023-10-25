@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #16BFFD;
+    overflow: hidden;
+}
+
+
+.jsoneditor{
+    height: 100vh;
+    width: 100vw;
+}
+
+.jsoneditor-menu {
+    width: 100%;
+    height: 35px;
+    padding: 2px;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: white;
+    background-color: #0F0F0F;
+    border-bottom: 1px solid #3883fa;
+}
+
+.jsoneditor-navigation-bar {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #d3d3d3;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #808080;
+    background-color: #ebebeb;
+    overflow: hidden;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+.jsoneditor input, .jsoneditor input:not([type]), .jsoneditor input[type=text], .jsoneditor input[type=search], .jsoneditor-modal input, .jsoneditor-modal input:not([type]), .jsoneditor-modal input[type=text], .jsoneditor-modal input[type=search] {
+    height: 100%;
+    border: inherit;
+    box-shadow: none;
+    font-size: inherit;
+    box-sizing: inherit;
+    padding: inherit;
+    font-family: inherit;
+    transition: none;
+    line-height: inherit;
+    background: #0F0F0F;
+    color: white;
+}
+
+div.jsoneditor-tree {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: auto;
+    background: #0F0F0F;
+    color: white;
+}
+
+.jsoneditor-treepath {
+    padding: 0 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    outline: none;
+    background: #232D3F;
+    color: white;
+}
+
+.jsoneditor-frame {
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: #232D3F;
+    padding: 0 2px;
+    margin: 0;
+}
+
+div.jsoneditor-field, div.jsoneditor-value, div.jsoneditor td, div.jsoneditor th, div.jsoneditor textarea, pre.jsoneditor-preview, .jsoneditor-schema-error, .jsoneditor-popover {
+    font-family: consolas, menlo, monaco, "Ubuntu Mono", "source-code-pro", monospace;
+    font-size: 14px;
+    color: white;
+}

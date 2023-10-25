@@ -90,6 +90,7 @@ function updateBubbles(){
         bubble.style.top = parseInt(bubble.style.top) + (bubble.target[1] - parseInt(bubble.style.top))/90 + "px";
         if(isCollide(bubble.getBoundingClientRect(), mouseCursor.getBoundingClientRect())){bubble.target = [getRandomInt(0, window.innerWidth), getRandomInt(0, window.innerHeight)];}
     });
+    requestAnimationFrame(updateBubbles);
 }
 
 function bubbleSwitchClicked() {
@@ -115,8 +116,8 @@ window.addEventListener("click", spawnBubbleByCursor);
 bubbleSwitch.addEventListener("click", bubbleSwitchClicked);
 
 //Loops
-setInterval(spawnBubbleRandomly, 1);
-setInterval(updateBubbles, 16);
+setInterval(spawnBubbleRandomly, 30);
+requestAnimationFrame(updateBubbles);
 
 window.addEventListener( "pageshow", function ( event ) {
     const historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);

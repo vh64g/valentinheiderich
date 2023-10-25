@@ -1,38 +1,34 @@
 let headline = document.querySelector("#headline");
-let swipeHint = document.querySelector("#swipe-hint");
-let blackCover = document.querySelector("#black-cover");
+let sub = document.querySelector("#swipe-hint");
+let cover = document.querySelector("#black-cover");
+let default_opacity = 1;
+const min_opacity = 0;
+const max_opacity = 1;
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 
-if (window.innerWidth < 768) {
-
-}
-else {
-    function updateAnimations(hAnimation=null, shAnimation=null, out=false) {
-        if (hAnimation) {headline.style.animation = hAnimation || "none";}
-        if (shAnimation) {swipeHint.style.animation = shAnimation || "none";}
-        if(out) {blackCover.style.animation = "blend_in 3s ease-in-out forwards";}
-        else {blackCover.style.animation = "blend_out 0s ease-in-out forwards";}
+function scroll_effect(event) {
+    let scroll = event.deltaY * -0.001;
+    default_opacity += scroll;
+    default_opacity = clamp(default_opacity, min_opacity, max_opacity);
+    headline.style.opacity = default_opacity;
+    sub.style.opacity = default_opacity;
+    cover.style.opacity = 1-default_opacity;
+    if (default_opacity <= 0) {
+        window.location.href = "nav_menu.html";
     }
-
-    document.addEventListener("swipe", (e) => {
-        switch(e.detail) {
-            case "left":
-                updateAnimations("slide-out-right 3s ease-in-out forwards", "slide-out-right-hint 3s ease-in-out forwards", true);
-                setTimeout(() => {document.location.href = "music.html";}, 3000);
-                break;
-            case "right":
-                updateAnimations("slide-out-left 3s ease-in-out forwards", "slide-out-left-hint 3s ease-in-out forwards", true);
-                setTimeout(() => {document.location.href = "projects.html";}, 3000);
-                break;
-            case "up":
-                break;
-            case "down":
-                updateAnimations("slide-out-up 3s ease-in-out forwards", "slide-out-up-hint 3s ease-in-out forwards", true);
-                setTimeout(() => {document.location.href = "imprint.html";}, 3000);
-                break;
-        }
-    });
 }
+
+addEventListener("wheel", (event) => {
+    let ticking = false;
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            scroll_effect(event);
+            ticking = false;
+        });ticking = true;
+    }
+});
 
 window.addEventListener( "pageshow", function ( event ) {
     const historyTraversal = event.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2);

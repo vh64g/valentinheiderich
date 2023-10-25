@@ -24,7 +24,6 @@
         z-index: -1;
     }
 
-
     .cover {
         position: absolute;
         top: 0;
@@ -108,6 +107,15 @@
         }
         100% {
             filter: hue-rotate(360deg);
+        }
+    }
+
+    @keyframes slide-out-up {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-50%, -150%);
         }
     }
 }

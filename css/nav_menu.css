@@ -1,6 +1,6 @@
 html, body {
-    overflow-x: hidden;
-    background-color: #242f3f;
+    overflow: hidden;
+    background-color: #000;
     width: 100%; height: 100%;
     padding: 0; margin: 0;
     user-select: none;
@@ -8,7 +8,8 @@ html, body {
 
 body{
     position: fixed;
-    background: #242f3f;
+    background: black;
+    overflow: hidden;
     width: 100%; height: 100%;
     margin: 0; padding: 0;
 }
@@ -46,7 +47,6 @@ h1:hover{
     padding: 10px 20px;
     font-size: 1.25em;
     transition: all 0.3s ease;
-    cursor: none;
 }
 .button:hover{
     background: #16BFFD;  /* fallback for old browsers */
@@ -73,7 +73,8 @@ h1:hover{
 
 @media screen and (min-width: 768px){
     #content{
-        opacity: 1;
+        position: fixed;
+        opacity: 0;
         width: 100%; height: 100%;
         z-index: 1;
         cursor: none;
@@ -81,22 +82,12 @@ h1:hover{
 }
 @media screen and (max-width: 768px){
     #content{
+        position: fixed;
         opacity: 1;
         width: 100vw; height: 100vh;
         z-index: 1;
         cursor: none;
     }
-}
-
-*{
-    cursor: none;
-    user-select: none;
-}
-
-li{
-    cursor: none;
-    user-select: none;
-    list-style-type: none;
 }
 
 @keyframes shake {

@@ -11,5 +11,5 @@ function touchCursor(e) {
     mouseCursor.style.left = e.touches[0].pageX + "px";
 }
 
-if (animated_cursor) {window.addEventListener("mousemove", animatedCursor);} else {window.addEventListener("mousemove", cursor);}
+if (animated_cursor) {window.addEventListener("mousemove", animatedCursor);} else {window.addEventListener("mousemove", cursor);window.addEventListener("load", cursor);}
 window.addEventListener("touchmove", touchCursor);

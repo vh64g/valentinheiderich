@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport">
     <title>Music Player</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <link rel="stylesheet" href="../css/music.css">
@@ -9,7 +10,7 @@
 </head>
 
 <body>
-
+<progress id="volume" value="20" max="100"></progress>
 <div id="app-cover">
     <div id="bg-artwork"></div>
     <div id="bg-layer"></div>
@@ -29,9 +30,9 @@
         </div>
         <div id="player-content">
             <div id="album-art">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" class="active" id="_1">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" class="active" id="_1">
                 <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_2.jpg" id="_2">
-                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_3.jpg" id="_3">
+                <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_1.jpg" id="_3">
                 <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_4.jpg" id="_4">
                 <img src="https://raw.githubusercontent.com/himalayasingh/music-player-1/master/img/_5.jpg" id="_5">
                 <img src="../data/images/theme/christmas.jpg" id="_6">
@@ -57,7 +58,6 @@
         </div>
     </div>
 </div>
-<div id="back-home">Go back <a href="https://valentinheiderich.com/pages/home.html">home</a></div>
 <div id="credits">Check out <a href="https://codepen.io/himalayasingh/pen/QZKqOX">the original</a> Music Player from CodePen</div>
 <script src="../js/music.js"></script>
 </body>

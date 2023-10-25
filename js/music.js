@@ -1,3 +1,7 @@
+let volume = 0.2;
+const min_volume = 0;
+const max_volume = 1;
+
 $(function () {
     var playerTrack = $("#player-track"),
         bgArtwork = $("#bg-artwork"),
@@ -30,26 +34,26 @@ $(function () {
         buffInterval = null,
         tFlag = false,
         albums = [
-            "Dawn",
-            "Me & You",
             "Electro Boy",
+            "Me & You",
+            "Dawn",
             "Home",
             "Proxy (Original Mix)",
             "Children, Go Tell It!"],
 
         trackNames = [
-            "Skylike - Dawn",
-            "Alex Skrindo - Me & You",
             "Kaaze - Electro Boy",
+            "Alex Skrindo - Me & You",
+            "Skylike - Dawn",
             "Jordan Schor - Home",
             "Martin Garrix - Proxy",
             "Greg Gilpin - Children, Go Tell It!"],
 
         albumArtworks = ["_1", "_2", "_3", "_4", "_5", "_6"],
         trackUrl = [
-            "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3",
-            "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3",
             "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/3.mp3",
+            "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/1.mp3",
+            "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/2.mp3",
             "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3",
             "https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3",
             "https://valentinheiderich.com/data/music/childrengotellit.mp3"],
@@ -199,7 +203,7 @@ $(function () {
             bTime = new Date();
             bTime = bTime.getTime();
 
-            if (flag != 0) {
+            if (flag !== 0) {
                 audio.play();
                 playerTrack.addClass("active");
                 albumArt.addClass("active");
@@ -217,38 +221,51 @@ $(function () {
 
             bgArtwork.css({ "background-image": "url(" + bgArtworkUrl + ")" });
         } else {
-            if (flag == 0 || flag == 1) --currIndex;else
+            if (flag === 0 || flag === 1) --currIndex;else
                 ++currIndex;
         }
     }
 
     function initPlayer() {
         audio = new Audio();
-
+        audio.volume = volume;
         selectTrack(0);
-
         audio.loop = false;
-
         playPauseButton.on("click", playPause);
-
-        sArea.mousemove(function (event) {
-            showHover(event);
-        });
-
+        sArea.mousemove(function (event) {showHover(event);});
         sArea.mouseout(hideHover);
-
         sArea.on("click", playFromClickedPos);
-
         $(audio).on("timeupdate", updateCurrTime);
-
-        playPreviousTrackButton.on("click", function () {
-            selectTrack(-1);
-        });
-        playNextTrackButton.on("click", function () {
-            selectTrack(1);
-        });
+        playPreviousTrackButton.on("click", function () {selectTrack(-1);});
+        playNextTrackButton.on("click", function () {selectTrack(1);});
     }
 
     initPlayer();
 });
-//# sourceURL=pen.js
+
+let volume_slider = document.getElementById("volume");
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
+function scroll_effect(event) {
+    let scroll = event.deltaY * -0.0001;
+    volume += scroll;
+    volume = clamp(volume, min_volume, max_volume);
+    let fade_audio = setInterval(function () {
+        if (audio.volume.toFixed(3) === volume.toFixed(3)) {clearInterval(fade_audio);}
+        else {
+            audio.volume < volume ? audio.volume += 0.001 : audio.volume -= 0.001;
+            volume_slider.value = audio.volume * 100;
+        }
+    });
+}
+
+addEventListener("wheel", (event) => {
+    let ticking = false;
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            scroll_effect(event);
+            ticking = false;
+        });ticking = true;
+    }
+});

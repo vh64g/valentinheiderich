@@ -66,16 +66,12 @@
         left: 75%;
         width: 25%;
         height: 75%;
-        border: gray solid 1px;
-        border-radius: 1em;
         transform: translate(-50%, -50%);
     }
 
     #contact {
         position: absolute;
         width: 100%;
-        border: gray solid 1px;
-        border-radius: 1em;
         color: #8C8C8C;
         pointer-events: none;
         user-select: none;
@@ -85,8 +81,6 @@
         position: absolute;
         top: 50%;
         width: 100%;
-        border: gray solid 1px;
-        border-radius: 1em;
         color: #8C8C8C;
         pointer-events: none;
         transform: translateY(-50%);
@@ -97,8 +91,6 @@
         position: absolute;
         top: 100%;
         width: 100%;
-        border: gray solid 1px;
-        border-radius: 1em;
         color: #8C8C8C;
         transform: translateY(-99%);
         pointer-events: none;

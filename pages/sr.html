@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Special Relativity</title>
+    <meta name="author" content="Valentin Heiderich">
+    <link rel="stylesheet" href="../css/sr.css">
+    <link rel="stylesheet" href="../css/elements/cover/glasscover.css">
+</head>
+<body>
+    <div class="cover">
+        <div class="tdc" id="tdc">
+            <h2>Time Dilation Calculator</h2>
+            <div class="user-box">
+                <input id="tdi1" required="">
+                <label>Speed of moving reference frame in m/s</label>
+            </div>
+            <div class="user-box">
+                <input id="tdi2" required="">
+                <label>Delta Time in s</label>
+            </div>
+            <button id="switch-mode">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                 Stationary
+            </button>
+            <button id="csrtd">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Calculate
+            </button>
+            <p class="out" id="out">Output</p>
+        </div>
+
+        <div class="tdc" id="clc">
+            <h2>Length Contraction Calculator</h2>
+            <div class="user-box">
+                <input id="lci1" required="">
+                <label>Speed of moving reference frame in m/s</label>
+            </div>
+            <div class="user-box">
+                <input id="lci2" required="">
+                <label>Length in m</label>
+            </div>
+            <button id="switch-mode-lc">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Stationary
+            </button>
+            <button id="csrlc">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Calculate
+            </button>
+            <p class="out" id="out1">Output</p>
+        </div>
+    </div>
+    <script src="../js/sr.js"></script>
+</body>
+</html>

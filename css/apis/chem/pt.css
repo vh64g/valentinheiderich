@@ -37,7 +37,6 @@ body{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #808080;
-    background-color: #ebebeb;
     overflow: hidden;
     font-family: arial, sans-serif;
     font-size: 14px;
@@ -53,8 +52,27 @@ body{
     font-family: inherit;
     transition: none;
     line-height: inherit;
-    background: #0F0F0F;
+    background: transparent;
     color: white;
+    margin: 0; border: 0;
+}
+
+div.jsoneditor-field.jsoneditor-highlight-active, div.jsoneditor-field.jsoneditor-highlight-active:focus, div.jsoneditor-field.jsoneditor-highlight-active:hover, div.jsoneditor-value.jsoneditor-highlight-active, div.jsoneditor-value.jsoneditor-highlight-active:focus, div.jsoneditor-value.jsoneditor-highlight-active:hover {
+    background-color: black;
+    border: 2px solid #3883fa;
+    border-radius: 3px;
+}
+div.jsoneditor-field[contenteditable=true]:focus, div.jsoneditor-field[contenteditable=true]:hover, div.jsoneditor-value[contenteditable=true]:focus, div.jsoneditor-value[contenteditable=true]:hover, div.jsoneditor-field.jsoneditor-highlight, div.jsoneditor-value.jsoneditor-highlight {
+    background-color: black;
+    border: 2px solid #3883fa;
+    border-radius: 3px;
+}
+
+
+
+.jsoneditor-modal input[type=button], .jsoneditor-modal input[type=submit] {
+    background: #3883fa;
+    padding: 4px 20px;
 }
 
 div.jsoneditor-tree {

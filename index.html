@@ -9,13 +9,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/elements/cover/glasscover.css">
-    <link rel="stylesheet" href="css/elements/inputs/switch.css">
 </head>
 <body class="body">
-    <div class="cover"></div>
-    <div class="cursor"></div>
-    <label class="switch"><input class="switchCheckbox" type="checkbox"><span class="slider round"></span></label>
-    <button class="button" id="Enter" onclick="openWebsite()">Enter...</button>
+
+    <main>
+        <ul class='slider'>
+
+            <li class='item' style="background-image: url('https://cdn.pixabay.com/photo/2023/11/13/10/32/fields-8385045_1280.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"Will be available in the future"</h2>
+                    <p class='description'></p>
+                    <button>Enter</button>
+                </div>
+            </li>
+
+            <li class='item' style="background-image: url('https://cdn.pixabay.com/photo/2023/11/14/14/59/mountains-8387889_1280.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"Valentin Heiderich"</h2>
+                    <p class='description'> My personal Website</p>
+                    <button onclick="window.location.href='pages/home.html';">Enter</button>
+                </div>
+            </li>
+
+            <li class='item' style="background-image: url('https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"Special Relativity"</h2>
+                    <p class='description'> Here you can find some tools which may be useful for calculations or for better understanding of Special Relativity  </p>
+                    <button onclick="window.location.href='pages/sr.html';">Enter</button>
+                </div>
+            </li>
+
+            <li class='item' style="background-image: url('https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_1280.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"The social Galaxy"</h2>
+                    <p class='description'> Will be available soon </p>
+                    <button>Enter</button>
+                </div>
+            </li>
+
+            <li class='item' style="background-image: url('https://cdn.pixabay.com/photo/2023/11/13/10/32/fields-8385045_1280.jpg')">
+                <div class='content'>
+                    <h2 class='title'>"Will be available in the future"</h2>
+                    <p class='description'></p>
+                    <button>Enter</button>
+                </div>
+            </li>
+
+        </ul>
+
+        <nav class='nav'>
+            <ion-icon class='btn prev' name="arrow-back-outline"></ion-icon>
+            <ion-icon class='btn next' name="arrow-forward-outline"></ion-icon>
+        </nav>
+
+        <div class="cover" id="gc"></div>
+
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
     <script src="js/elements/cursor/cursor.js"></script>
     <script src="js/index.js"></script>
 </body>

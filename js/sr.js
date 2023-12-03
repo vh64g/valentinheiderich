@@ -19,18 +19,30 @@ let lcs = true;
 tds_btn.addEventListener("click", function () {
     tds = !tds;
     if (tds) {
-        tds_btn.innerHTML = "Stationary";
+        tds_btn.innerHTML = "<span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>Stationary";
     } else {
-        tds_btn.innerHTML = "Moving";
+        tds_btn.innerHTML = "<span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>Moving";
     }
 });
 
 lcs_btn.addEventListener("click", function () {
     lcs = !lcs;
     if (lcs) {
-        lcs_btn.innerHTML = "Stationary";
+        lcs_btn.innerHTML = "<span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>Stationary";
     } else {
-        lcs_btn.innerHTML = "Moving";
+        lcs_btn.innerHTML = "<span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>\n" +
+            "                <span></span>Moving";
     }
 });
 
